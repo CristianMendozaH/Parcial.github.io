@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MRUV</title>
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="preload" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Movimiento Rectilíneo Uniformemente Variado (MRUV)</h1>
+        <a href="/index.html"><img src="/img/exit.png" alt="Logo de la universidad" class="Logo"></a>
+    </header>
+
+    <section>
+        <h2 class="tituloCalculo">Cálculo para MRUV</h2>
+        <p>El movimiento rectilíneo uniformemente variado o MRUV es un movimiento que ocurre sobre una línea recta con aceleración constante. En el MRUV la aceleración es constante, nunca va a cambiar, siempre es la misma. Mucha atención, lo constante es la aceleración, no la velocidad.</p>
+        <article class="grid-container">
+        <!-- Cálculo de Aceleración -->
+        <form id="form-mruv-aceleracion">
+            <h3 class="formTitulo">Aceleración</h3>
+            <p>La aceleración indica la variación de la velocidad por unidad de tiempo. Por ejemplo, tenemos un auto que parte del reposo (v0 = 0 m/s) y avanza con una aceleración constante de 2 m/s2.</p>
+            <br>
+            <img src="/img/aceleracion.png" alt="">
+            <br>
+            <br>
+            <label for="velocidad-inicial">Velocidad Inicial (m/s):</label>
+            <input type="number" id="velocidad-inicial" required>
+            <label for="velocidad-final">Velocidad Final (m/s):</label>
+            <input type="number" id="velocidad-final" required>
+            <label for="tiempo">Tiempo (s):</label>
+            <input type="number" id="tiempo-acel" required>
+            <button type="button" onclick="calcularAceleracion()">Calcular Aceleración</button>
+            <p id="resultado-aceleracion"></p>
+        </form>
+
+        <!-- Cálculo de Distancia -->
+        <form id="form-mruv-distancia">
+            <h3 class="formTitulo">Distancia</h3>
+            <p>La distancia en un Movimiento Rectilíneo Uniformemente Variado (MRUV) se refiere a la medida de la longitud que recorre un objeto en movimiento durante un período de tiempo específico. En un MRUV, la velocidad del objeto cambia de manera uniforme y constante en el tiempo, lo que significa que la aceleración es constante. Esto resulta en un cambio en la velocidad que puede ser de aumento o disminución constante a lo largo del tiempo. La distancia en un MRUV se calcula utilizando la fórmula d=v0t+21at2, donde d representa la distancia recorrida, v0 es la velocidad inicial del objeto, t es el tiempo transcurrido y a es la aceleración del objeto.</p>
+            <br>
+            <img src="/img/Distancia.png" alt="">
+            <br>
+            <br>
+            <label for="velocidad-inicial">Velocidad Inicial (m/s):</label>
+            <input type="number" id="velocidad-inicial-dist" required>
+            <label for="aceleracion">Aceleración (m/s²):</label>
+            <input type="number" id="aceleracion-dist" required>
+            <label for="tiempo">Tiempo (s):</label>
+            <input type="number" id="tiempo-dist" required>
+            <button type="button" onclick="calcularDistanciaMRUV()">Calcular Distancia</button>
+            <p id="resultado-distancia-mruv"></p>
+        </form>
+
+        <!-- Cálculo de Velocidad Final -->
+        <form id="form-mruv-velocidad-final">
+            <h3 class="formTitulo">Velocidad Final</h3>
+            <p>La velocidad final en un Movimiento Rectilíneo Uniformemente Variado (MRUV) es la velocidad que tiene un objeto en un punto específico de su trayectoria cuando experimenta una aceleración constante. Se define como la velocidad que el objeto alcanzaría si continuara moviéndose a lo largo del MRUV bajo la misma aceleración. La velocidad final en un MRUV se representa típicamente con la letra "v" subíndice "f" o "vf". Para calcularla, se utiliza la siguiente fórmula:</p>
+            <br>
+            <img src="/img/Velocidad Final.png" alt="">
+            <br>
+            <br>
+            <label for="velocidad-inicial">Velocidad Inicial (m/s):</label>
+            <input type="number" id="velocidad-inicial-final" required>
+            <label for="aceleracion">Aceleración (m/s²):</label>
+            <input type="number" id="aceleracion-final" required>
+            <label for="tiempo">Tiempo (s):</label>
+            <input type="number" id="tiempo-final" required>
+            <button type="button" onclick="calcularVelocidadFinal()">Calcular Velocidad Final</button>
+            <p id="resultado-velocidad-final"></p>
+        </form>
+    </article>
+</section>
+
+
+<!--------------------------footer-------------------------->
+    <footer>
+        <h1>Cristian Daniel Mendoza Hernández</h1>
+        <h2>2290-21-20201</h2>
+        <p>Ingeniería en Sistemas - Universidad Mariano Gálvez de Sololá</p>
+    </footer>
+</body>
+<!---------------------------------------fin pie de pagina--------------------------------------->
+    <script src="/js/codigo.js"></script>
+</body>
+</html>
